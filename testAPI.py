@@ -7,7 +7,7 @@ import json
 dataCreate = sys.argv[1]
 dataUpdate = sys.argv[2]
 
-def is_json(data):
+def isJson(data):
     assert json.loads(data), "Data must be in Json"
     print('OK : Data is in Json')
     return True
@@ -41,7 +41,7 @@ def testDelete(url):
     print('OK : Bookmark successfully deleted')
     return True
 
-is_json(dataCreate)
+isJson(dataCreate)
 (useless, urlB) = testCreate(dataCreate)
 testUpdate(urlB, dataUpdate)
 testDelete(urlB)
